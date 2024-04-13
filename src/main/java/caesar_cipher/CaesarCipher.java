@@ -103,12 +103,12 @@ public class CaesarCipher extends JFrame {
 		senderCountryCodeLabel.setVerticalAlignment(SwingConstants.CENTER);
 		panel.add(senderCountryCodeLabel);
 
-		JTextField senderCountryCodeInput = new JTextField();
+		JTextField senderCountryCodeInput = new JTextField();                               // Twilio Phone NUmber Country Code
 		senderCountryCodeInput.setBounds(360, 160, 40, 40);
 		senderCountryCodeInput.setFont(new Font("Courier New", Font.PLAIN, 18));
         panel.add(senderCountryCodeInput);
 
-        JTextField senderPhoneInput = new JTextField();
+        JTextField senderPhoneInput = new JTextField();                                     // Twilio Phone Number
         senderPhoneInput.setBounds(420, 160, 320, 40);
         senderPhoneInput.setFont(new Font("Courier New", Font.PLAIN, 18));
         panel.add(senderPhoneInput);
