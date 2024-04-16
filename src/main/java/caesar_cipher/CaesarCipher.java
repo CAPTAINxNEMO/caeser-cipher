@@ -154,7 +154,10 @@ public class CaesarCipher extends JFrame {
 		nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-				if (!senderCountryCodeInput.getText().isEmpty() && !senderPhoneInput.getText().isEmpty() && !accountSIDInput.getText().isEmpty() && !tokenInput.getText().isEmpty()) {
+				if (!senderCountryCodeInput.getText().isEmpty() &&
+                    !senderPhoneInput.getText().isEmpty() &&
+                    !accountSIDInput.getText().isEmpty() &&
+                    !tokenInput.getText().isEmpty()) {
 					senderPhone = "+" + senderCountryCodeInput.getText() + senderPhoneInput.getText();
 					ACCOUNT_SID = accountSIDInput.getText();
 					AUTH_TOKEN = tokenInput.getText();
@@ -192,7 +195,7 @@ public class CaesarCipher extends JFrame {
 		receiverCountryCodeLabel.setVerticalAlignment(SwingConstants.CENTER);
 		panel.add(receiverCountryCodeLabel);
 		
-		JTextField receiverCountryCodeInput = new JTextField();
+		JTextField receiverCountryCodeInput = new JTextField("91");
 		receiverCountryCodeInput.setBounds(360, 140, 40, 40);
 		receiverCountryCodeInput.setFont(new Font("Courier New", Font.PLAIN, 18));
         panel.add(receiverCountryCodeInput);
@@ -297,7 +300,9 @@ public class CaesarCipher extends JFrame {
 		sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-				if (!receiverCountryCodeInput.getText().isEmpty() && !receiverPhoneInput.getText().isEmpty() && !encryptedOutput.getText().isEmpty()) {
+				if (!receiverCountryCodeInput.getText().isEmpty() &&
+                    !receiverPhoneInput.getText().isEmpty() &&
+                    !encryptedOutput.getText().isEmpty()) {
 					receiverPhone = "+" + receiverCountryCodeInput.getText() + receiverPhoneInput.getText();
 
 					Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
