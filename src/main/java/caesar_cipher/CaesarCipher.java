@@ -309,7 +309,7 @@ public class CaesarCipher extends JFrame {
 					Message.creator(
 						new PhoneNumber(receiverPhone),
 						new PhoneNumber(senderPhone),
-						"Ciphertext: " + ciphertext + "\nShift: " + encryptionShiftInput.getText()
+						"\nCiphertext: " + ciphertext + "\nShift: " + encryptionShiftInput.getText()
 					).create();
 				}
             }
